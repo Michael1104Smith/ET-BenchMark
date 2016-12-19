@@ -1,0 +1,212 @@
+
+
+/*================================================
+Graph: Vertical Bar ||||||||||||||||||||||||||||||
+================================================*/
+
+
+.graph-benchmark {
+	position: relative;
+	max-width: 20em;
+	padding: 4em 2em 6em;
+	box-sizing: border-box;
+	font-family: 'roboto', 'helvetica neue', helvetica, arial, sans-serif;
+	line-height: 1.5;
+}
+
+.graph-benchmark--has-comparison {
+	max-width: 25em;
+}
+
+.graph-benchmark .graph-title {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.graph-benchmark ul:first-of-type {
+	position: relative;
+	list-style: none;
+	margin: 0;
+	padding: 0 0 80% 0;
+	border-bottom: 1px solid #bdc2c7;
+}
+
+.graph-benchmark .graph-bar {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 50%;
+}
+
+.graph-benchmark--has-comparison .graph-bar {
+	width: 45%;
+}
+
+.graph-benchmark .graph-bar ~ .graph-bar {
+	right: 0;
+	left: auto;
+}
+
+.graph-benchmark .graph-bar-label {
+	position: absolute;
+	text-align: center;
+	right: 0;
+	top: 100%;
+	left: 0;
+	font-weight: 500;
+	font-size: 1.25em;
+	background-color: #eef3f4;
+	margin-top: 0.25em;
+	color: #a3a9b2;
+}
+
+.graph-benchmark.graph-benchmark--has-comparison .graph-bar-label {
+	color: inherit;
+}
+
+.graph-benchmark--has-comparison .graph-bar:first-child .graph-bar-label:after {
+	content: '';
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	width: 25%;
+	background-color: inherit;
+	left: 100%;
+}
+
+.graph-benchmark .graph-bar-value {
+	position: absolute;
+	text-align: center;
+	right: 0;
+	bottom: 100%;
+	left: 0;
+	font-weight: 500;
+	font-size: 1.125em;
+	margin-bottom: 0.5em;
+}
+
+.graph-benchmark.graph-benchmark--over .graph-bar--actual .graph-bar-value {
+	font-size: 1.875em;
+	font-weight: 900;
+	color: #e74c3c;
+}
+
+.graph-benchmark .graph-bar-graphic {
+	position: absolute;
+	display: block;
+	right: 25%;
+	bottom: 0.5em;
+	left: 25%;
+	max-height: 100%;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center top;
+	overflow: hidden;
+}
+
+.graph-benchmark .graph-bar-graphic:after {
+	content: '';
+	position: absolute;
+	display: block;
+	top: 2%;
+	right: 30%;
+	height: 100%;
+	width: 10%;
+	border-radius: 4px;
+	background-image: linear-gradient( to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0) );
+}
+
+.graph-benchmark  .graph-bar-graphic span {
+	display: block;
+	width: 70%;
+	padding-bottom: 13%;
+	background-color: #85939e;
+	border-radius: 4px;
+	margin: 0 auto;
+}
+.graph-benchmark .graph-bar-graphic span:first-child {
+	width: 100%;
+}
+.graph-benchmark .graph-bar-graphic span:nth-child(2) {
+	width: 85%;
+}
+.graph-benchmark .graph-bar-graphic span + span {
+	margin-top: 8%;
+}
+
+.graph-benchmark .graph-comparison {
+	position: absolute;
+	width: 30%;
+	text-align: center;
+	left: 50%;
+	margin-left: -15%;
+	bottom: 20%;
+	font-weight: 500;
+	line-height: 1.3;
+}
+.graph-benchmark .graph-comparison--positive {
+	color: #e74c3c;
+}
+.graph-benchmark .graph-comparison--negative {
+	color: #4bb96d;
+}
+.graph-benchmark .graph-comparison em {
+	display: block;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 2.5em;
+}
+
+
+
+@media ( max-width: 48em ) {
+	.graph-benchmark--has-comparison {
+		font-size: 0.75em;
+	}
+}
+
+@media ( max-width: 60em ) {
+	
+	.graph-benchmark {
+		margin: 0 auto;
+	}
+}
+
+@media ( min-width: 48em ) {
+	
+	.graph-benchmark-bucket {
+		margin-right: -5%;
+	}
+	
+	
+	.graph-benchmark-bucket .graph-benchmark-bucket-item {
+		display: inline-block;
+		vertical-align: top;
+		width: 28.33333%;
+		margin-right: 4%;
+	}
+	.graph-benchmark-bucket .graph-benchmark {
+		font-size: 0.75em;
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
+@media ( min-width: 60em ) {
+	
+	.app-content-body-aside .graph-benchmark {
+		font-size: 0.75em;
+	}
+	
+	.section--long .graph-benchmark-bucket .graph-benchmark {
+		font-size: 0.625em;
+	}
+}

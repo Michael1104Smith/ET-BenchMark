@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ExtensionObject  Path="ET-BenchMark" 
+                  Label="ET-BenchMark" 
+                  Description="Graph-BenchMark" 
+                  Type="object" PageWidth="10000" PageHeight="10000">
+  	<Text Label="Actual Color" Type="color" Expression="#c0c0c0" />
+  	<Text Label="Text1" Type="text" Expression="Total Claims" />
+  	<Text Label="Text2" Type="text" Expression="Spouse" />
+	<Dimension Label="Plan Year" Initial="" TargetName="=[Plan Year]" />
+  	<Text Label="BenchMark" Type="text" Expression="SUM(%BM_PaidPerEnrollment)" />
+  	<Text Label="Actual" Type="text" Expression="SUM(%Claim_PaidAmount)" />
+	<Text Label="Show legend" Type="checkbox"" Initial="" />
+</ExtensionObject>
